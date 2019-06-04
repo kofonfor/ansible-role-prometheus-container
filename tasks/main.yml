@@ -24,7 +24,7 @@
     exposed_ports:
       - 9090
     ports:
-      - "9090:9090"
+      - "{{ prometheus_container_host_address }}:{{ prometheus_port }}:9090"
     volumes:
       - "{{ ext_prometheus_data_volume }}:/data"
       - "{{ ext_prometheus_config_volume }}:/etc/config"
