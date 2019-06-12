@@ -1,0 +1,18 @@
+groups:
+{% for group in prometheus_alert_groups %}
+- name: {{ group.name }}
+  rules:
+{% for rule in group.rules %}
+  - alert: {{ rule.name }}
+    expr: {{ rule.expr }}
+    for: {{ rule.duration }}
+    labels:
+{% for key,value in rule.labels.iteritems() %}
+      {{ key }}: {{ value }}
+{% endfor %}
+    annotations:
+{% for key,value in rule.annotations.iteritems() %}
+      {{ key }}: '{{ value }}'
+{% endfor %}
+{% endfor %}
+{% endfor %}

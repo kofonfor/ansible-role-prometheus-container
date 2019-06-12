@@ -7,6 +7,9 @@
 - name: put prometheus.yml
   template: src=prometheus.yml dest="{{ ext_prometheus_config_volume }}/prometheus.yml"
 
+- name: put alerts
+  template: src=alerts dest="{{ ext_prometheus_config_volume }}/alerts"
+
 - name: install python-pip
   apt: name=python-pip
 
