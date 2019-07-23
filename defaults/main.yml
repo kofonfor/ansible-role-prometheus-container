@@ -3,6 +3,7 @@ prometheus_container_host_address: 0.0.0.0
 prometheus_port: 9090
 prometheus_scrape_interval: 1m
 alertmanager_cluster_port: 9094
+alertmanager_port: 9093
 ext_prometheus_data_volume: /var/lib/docker-extvols/prometheus/data
 ext_prometheus_config_volume: /var/lib/docker-extvols/prometheus/config
 prometheus_alert_groups: []
