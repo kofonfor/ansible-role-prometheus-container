@@ -2,6 +2,7 @@ prometheus_tsdb_retention_time: 15d
 prometheus_container_host_address: 0.0.0.0
 prometheus_port: 9090
 prometheus_scrape_interval: 1m
+prometheus_scrape_timeout: 10s
 alertmanager_cluster_port: 9094
 alertmanager_port: 9093
 ext_prometheus_data_volume: /var/lib/docker-extvols/prometheus/data

@@ -1,7 +1,7 @@
 global:
   evaluation_interval: 1m
   scrape_interval: {{ prometheus_scrape_interval }}
-  scrape_timeout: 10s
+  scrape_timeout: {{ prometheus_scrape_timeout }}
 
 rule_files:
   - /etc/config/rules
