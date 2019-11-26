@@ -1,5 +1,5 @@
 - name: create ext volume for data
-  file: state=directory path={{ ext_prometheus_data_volume }} owner=nobody group=nogroup
+  file: state=directory path={{ ext_prometheus_data_volume }} owner=65534 group=65534
 
 - name: create ext volume for config files
   file: state=directory path={{ ext_prometheus_config_volume }}
