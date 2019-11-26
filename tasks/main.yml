@@ -12,6 +12,7 @@
 
 - name: install python-pip
   apt: name=python-pip
+  when: "ansible_os_family == 'Debian'"
 
 - name: install the Python Docker library
   pip: name=docker
